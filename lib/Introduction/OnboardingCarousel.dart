@@ -48,7 +48,7 @@ class Onboardingcarousel extends StatelessWidget {
       pageBackgroundColor: Colors.white,
       background: [
         Image.asset(
-          'assets/konzo1.png',
+          'assets/amazed.jpeg',
           height: 400,
           width: 400,
           fit: BoxFit.cover,
