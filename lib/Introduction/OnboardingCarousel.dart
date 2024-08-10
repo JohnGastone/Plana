@@ -14,7 +14,7 @@ class Onboardingcarousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OnBoardingSlider(
-      finishButtonText: 'Get Started',
+      finishButtonText: 'Get Organized',
       onFinish: () {
         Navigator.push(
           context,
@@ -83,7 +83,7 @@ class Onboardingcarousel extends StatelessWidget {
                 height: 430,
               ),
               Text(
-                'Welcome to Dr Konzo',
+                'Organize your World',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.poppins(
                   color: kDarkBlueColor,
@@ -95,7 +95,7 @@ class Onboardingcarousel extends StatelessWidget {
                 height: 15,
               ),
               Text(
-                'Discover the best Tanzanian physicians and enjoy a seamless healing experience',
+                'Effortlessly keep track of all your tasks, projects, and goals in one place.',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.poppins(
                   color: Colors.blueGrey,
@@ -118,7 +118,7 @@ class Onboardingcarousel extends StatelessWidget {
                 height: 430,
               ),
               Text(
-                'Easy booking.',
+                'Simplify Your Workflow.',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.poppins(
                   color: kDarkBlueColor,
@@ -130,7 +130,7 @@ class Onboardingcarousel extends StatelessWidget {
                 height: 15,
               ),
               Text(
-                'Browse our extensive list of doctors and book an appointment with just few taps',
+                'Create, assign, and prioritize tasks with ease, ensuring nothing falls through the cracks.',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.poppins(
                   color: Colors.blueGrey,
@@ -153,7 +153,7 @@ class Onboardingcarousel extends StatelessWidget {
                 height: 415,
               ),
               Text(
-                'Effective prescription',
+                'Achieve Your Goals',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.poppins(
                   color: kDarkBlueColor,
@@ -165,7 +165,7 @@ class Onboardingcarousel extends StatelessWidget {
                 height: 15,
               ),
               Text(
-                "Take your time with physician of your choice, and grab the path to your health problems' solution.",
+                "Track your progress, stay focused, and accomplish more with our powerful task management tools.",
                 textAlign: TextAlign.center,
                 style: GoogleFonts.poppins(
                   color: Colors.blueGrey,
