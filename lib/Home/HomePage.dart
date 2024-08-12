@@ -148,6 +148,7 @@ class _HomePageState extends State<HomePage> {
                       child: Padding(
                         padding: const EdgeInsets.all(12.0),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             CircleAvatar(
@@ -166,6 +167,37 @@ class _HomePageState extends State<HomePage> {
                               "User experience design",
                               style: GoogleFonts.poppins(
                                   color: Colors.white, fontSize: 16),
+                            ),
+                            SizedBox(
+                              height: 9,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20),
+                                child: LinearProgressIndicator(
+                                  value: 0.4, // Represents 40% progress
+                                  backgroundColor: const Color.fromARGB(
+                                      255,
+                                      216,
+                                      213,
+                                      213), // Optional background color
+                                  valueColor: AlwaysStoppedAnimation<Color>(
+                                      Colors.white), // Progress bar color
+                                ),
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "Progress",
+                                  style: GoogleFonts.poppins(
+                                      color: Colors.white, fontSize: 14),
+                                ),
+                                Text(
+                                  "40%",
+                                  style: GoogleFonts.poppins(
+                                      color: Colors.white, fontSize: 14),
+                                )
+                              ],
                             )
                           ],
                         ),
@@ -181,6 +213,7 @@ class _HomePageState extends State<HomePage> {
                       child: Padding(
                         padding: const EdgeInsets.all(12.0),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             CircleAvatar(
@@ -199,13 +232,64 @@ class _HomePageState extends State<HomePage> {
                               "Meeting with designer",
                               style: GoogleFonts.poppins(
                                   color: Colors.white, fontSize: 16),
+                            ),
+                            SizedBox(
+                              height: 9,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20),
+                                child: LinearProgressIndicator(
+                                  value: 0.6, // Represents 40% progress
+                                  backgroundColor: const Color.fromARGB(
+                                      255,
+                                      216,
+                                      213,
+                                      213), // Optional background color
+                                  valueColor: AlwaysStoppedAnimation<Color>(
+                                      Colors.white), // Progress bar color
+                                ),
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "Progress",
+                                  style: GoogleFonts.poppins(
+                                      color: Colors.white, fontSize: 14),
+                                ),
+                                Text(
+                                  "60%",
+                                  style: GoogleFonts.poppins(
+                                      color: Colors.white, fontSize: 14),
+                                )
+                              ],
                             )
                           ],
                         ),
                       ),
                     ),
                   ],
-                )
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Upcoming Tasks",
+                      style: GoogleFonts.poppins(
+                          fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      "See All",
+                      style: GoogleFonts.poppins(
+                          color: Colors.grey,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w400),
+                    )
+                  ],
+                ),
               ],
             ),
           ),
