@@ -60,6 +60,54 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
+      body: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                  width: 320,
+                  height: 130,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(22),
+                      color: const Color.fromARGB(255, 27, 31, 69)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: Row(
+                      children: [
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Your today's task \n is almost done!",
+                              style: GoogleFonts.poppins(
+                                  color: Colors.white, fontSize: 20),
+                            ),
+                            SizedBox(
+                              height: 35,
+                              width: 95,
+                              child: FloatingActionButton(
+                                onPressed: () {},
+                                backgroundColor:
+                                    Color.fromARGB(255, 95, 209, 211),
+                                child: Center(
+                                  child: Text(
+                                    "View Task",
+                                    style: GoogleFonts.poppins(
+                                        color: Colors.white),
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  ))
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
