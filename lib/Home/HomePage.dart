@@ -290,6 +290,70 @@ class _HomePageState extends State<HomePage> {
                     )
                   ],
                 ),
+                SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  height: 80,
+                  width: 320,
+                  decoration: BoxDecoration(
+                      color: const Color.fromARGB(31, 250, 238, 238),
+                      borderRadius: BorderRadius.circular(22)),
+                  child: Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 8.0),
+                      child: Row(
+                        children: [
+                          Container(
+                            height: 40,
+                            width: 40,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color.fromARGB(255, 156, 229, 230),
+                            ),
+                            child: Center(
+                              child: Image.asset(
+                                "assets/marketing.png",
+                                height: 25,
+                                width: 25,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Social Media Marketing",
+                                style: GoogleFonts.poppins(
+                                    fontSize: 16, fontWeight: FontWeight.w600),
+                              ),
+                              Text(
+                                "23 Oct 2024",
+                                style: GoogleFonts.poppins(
+                                    fontSize: 15, color: Colors.grey),
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 85.0),
+                            child: IconButton(
+                                onPressed: () {}, icon: Icon(Icons.more_vert)),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 90,
+                )
               ],
             ),
           ),
