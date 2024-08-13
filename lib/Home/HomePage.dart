@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,6 +14,21 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  double _progress = 0.0;
+  @override
+  void initState() {
+    super.initState();
+    // Start a timer to simulate progress (replace with your actual logic)
+    Timer.periodic(Duration(seconds: 1), (timer) {
+      setState(() {
+        _progress += 0.05; // Increment progress by 5% every second
+        if (_progress >= 0.95) {
+          timer.cancel(); // Stop the timer when progress reaches 100%
+        }
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -104,10 +121,40 @@ class _HomePageState extends State<HomePage> {
                               )
                             ],
                           ),
+                          // Here the progress bar should be placed
+                          SizedBox(
+                            width: 90,
+                            height: 80,
+                            child: Stack(
+                              alignment: Alignment.center,
+                              children: [
+                                CircularProgressIndicator(
+                                  value: _progress,
+                                  backgroundColor: Colors.grey[300],
+                                  valueColor: AlwaysStoppedAnimation<Color>(
+                                    Color.fromARGB(255, 95, 209, 211),
+                                  ),
+                                  strokeWidth: 5,
+                                ),
+                                Text(
+                                  '${(_progress * 100).round()}%', // Calculate and display percentage
+                                  style: TextStyle(
+                                    color: Colors
+                                        .white, // Or any color that contrasts well with your progress bar
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                           Padding(
                             padding: const EdgeInsets.only(bottom: 85.0),
                             child: IconButton(
-                                onPressed: () {}, icon: Icon(Icons.more_vert)),
+                                onPressed: () {},
+                                icon: Icon(
+                                  Icons.more_vert,
+                                  color: Colors.white,
+                                )),
                           )
                         ],
                       ),
@@ -310,7 +357,7 @@ class _HomePageState extends State<HomePage> {
                             width: 40,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: Color.fromARGB(255, 156, 229, 230),
+                              color: Color.fromARGB(255, 179, 210, 210),
                             ),
                             child: Center(
                               child: Image.asset(
