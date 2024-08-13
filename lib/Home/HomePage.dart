@@ -297,7 +297,7 @@ class _HomePageState extends State<HomePage> {
                   height: 80,
                   width: 320,
                   decoration: BoxDecoration(
-                      color: const Color.fromARGB(31, 250, 238, 238),
+                      color: const Color.fromARGB(31, 137, 126, 126),
                       borderRadius: BorderRadius.circular(22)),
                   child: Padding(
                     padding: EdgeInsets.all(10),
