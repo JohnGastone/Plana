@@ -45,8 +45,40 @@ class _TaskPageState extends State<TaskPage> {
       ),
       body: Center(
         child: SingleChildScrollView(
-          child: Column(
-            children: [],
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              children: [
+                Center(
+                  child: Text(
+                    "User Experience Design",
+                    style: GoogleFonts.poppins(
+                        fontSize: 25, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      height: 60,
+                      width: 160,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: const Color.fromARGB(255, 233, 228, 228),
+                      ),
+                    ),
+                    Container(
+                      height: 60,
+                      width: 160,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: const Color.fromARGB(255, 233, 228, 228),
+                      ),
+                    ),
+                  ],
+                )
+              ],
+            ),
           ),
         ),
       ),
