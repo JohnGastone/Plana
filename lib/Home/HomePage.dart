@@ -406,25 +406,77 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 SizedBox(
-                  height: 40,
+                  height: 50,
                 ),
-                BottomNavigationBar(
-                  currentIndex: _selectedIndex,
-                  onTap: _onItemTapped,
-                  items: const <BottomNavigationBarItem>[
-                    BottomNavigationBarItem(
-                      icon: Icon(CupertinoIcons.home),
-                      label: 'Home',
+                Positioned(
+                  top: -20, // Adjust this value to control the height
+                  left: 0,
+                  right: 0,
+                  child: Align(
+                    alignment: Alignment.topCenter,
+                    child: CircleAvatar(
+                      radius: 20, // Adjust the radius as needed
+                      backgroundColor: Color.fromARGB(255, 95, 209, 211),
+                      child: FloatingActionButton(
+                        backgroundColor: Colors.transparent,
+                        elevation: 0,
+                        onPressed: () {},
+                        child: Icon(
+                          CupertinoIcons.add,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
-                    BottomNavigationBarItem(
-                      icon: Icon(CupertinoIcons.chart_bar),
-                      label: 'Stats',
+                  ),
+                ),
+                SizedBox(height: 8),
+                Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color:
+                        Colors.white, // Set your desired background color here
+                    borderRadius: BorderRadius.only(
+                      topLeft:
+                          Radius.circular(20), // Optional, for rounded corners
+                      topRight: Radius.circular(20),
                     ),
-                    BottomNavigationBarItem(
-                      icon: Icon(CupertinoIcons.person),
-                      label: 'Profile',
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black12,
+                        blurRadius: 10,
+                        offset: Offset(0, -5),
+                      ),
+                    ],
+                  ),
+                  child: BottomNavigationBar(
+                    // This should be at the bottom
+                    currentIndex: _selectedIndex,
+                    onTap: _onItemTapped,
+                    selectedLabelStyle: GoogleFonts.poppins(),
+                    unselectedLabelStyle: GoogleFonts.poppins(
+                      color: Colors.grey,
                     ),
-                  ],
+                    type: BottomNavigationBarType.fixed,
+                    selectedItemColor: Color.fromARGB(255, 95, 209, 211),
+                    items: const <BottomNavigationBarItem>[
+                      BottomNavigationBarItem(
+                        icon: Icon(CupertinoIcons.home),
+                        label: 'Home',
+                      ),
+                      BottomNavigationBarItem(
+                        icon: Icon(CupertinoIcons.calendar),
+                        label: 'Calendar',
+                      ),
+                      BottomNavigationBarItem(
+                        icon: Icon(CupertinoIcons.chart_bar),
+                        label: 'Stats',
+                      ),
+                      BottomNavigationBarItem(
+                        icon: Icon(CupertinoIcons.person),
+                        label: 'Profile',
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
