@@ -472,8 +472,8 @@ class _HomePageState extends State<HomePage> {
                         label: 'Stats',
                       ),
                       BottomNavigationBarItem(
-                        icon: Icon(CupertinoIcons.person),
-                        label: 'Profile',
+                        icon: Icon(CupertinoIcons.settings),
+                        label: 'Settings',
                       ),
                     ],
                   ),
