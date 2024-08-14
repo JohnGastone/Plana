@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_final_fields
 
 import 'dart:async';
 
@@ -15,6 +15,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   double _progress = 0.0;
+  int _selectedIndex = 0;
   @override
   void initState() {
     super.initState();
@@ -26,6 +27,12 @@ class _HomePageState extends State<HomePage> {
           timer.cancel(); // Stop the timer when progress reaches 100%
         }
       });
+    });
+  }
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
     });
   }
 
@@ -399,8 +406,26 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 SizedBox(
-                  height: 90,
-                )
+                  height: 40,
+                ),
+                BottomNavigationBar(
+                  currentIndex: _selectedIndex,
+                  onTap: _onItemTapped,
+                  items: const <BottomNavigationBarItem>[
+                    BottomNavigationBarItem(
+                      icon: Icon(CupertinoIcons.home),
+                      label: 'Home',
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(CupertinoIcons.chart_bar),
+                      label: 'Stats',
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(CupertinoIcons.person),
+                      label: 'Profile',
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
