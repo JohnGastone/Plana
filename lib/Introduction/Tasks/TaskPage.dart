@@ -66,6 +66,13 @@ class _TaskPageState extends State<TaskPage> {
                         borderRadius: BorderRadius.circular(10),
                         color: const Color.fromARGB(255, 233, 228, 228),
                       ),
+                      child: Center(
+                        child: Text(
+                          "18-08-2024",
+                          style: GoogleFonts.poppins(
+                              fontSize: 19, color: Colors.grey),
+                        ),
+                      ),
                     ),
                     Container(
                       height: 60,
@@ -73,6 +80,13 @@ class _TaskPageState extends State<TaskPage> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: const Color.fromARGB(255, 233, 228, 228),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "9:00 AM - 12:00 PM",
+                          style: GoogleFonts.poppins(
+                              fontSize: 19, color: Colors.grey),
+                        ),
                       ),
                     ),
                   ],
