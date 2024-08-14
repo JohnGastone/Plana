@@ -48,7 +48,7 @@ class Onboardingcarousel extends StatelessWidget {
       pageBackgroundColor: Colors.white,
       background: [
         Image.asset(
-          'assets/amazed.jpeg',
+          'assets/organize.png',
           height: 400,
           width: 400,
           fit: BoxFit.cover,
@@ -56,14 +56,14 @@ class Onboardingcarousel extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(left: 38.0),
           child: Image.asset(
-            'assets/booking.png',
+            'assets/simplify.png',
             height: 400,
             width: 300,
             fit: BoxFit.cover,
           ),
         ),
         Image.asset(
-          'assets/pills.png',
+          'assets/goals.png',
           height: 400,
           width: 400,
           fit: BoxFit.cover,
