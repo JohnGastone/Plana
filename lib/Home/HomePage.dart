@@ -6,6 +6,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../Introduction/Tasks/TaskPage.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -192,70 +194,79 @@ class _HomePageState extends State<HomePage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      height: 150,
-                      width: 150,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(22),
-                        color: Color.fromARGB(255, 95, 209, 211),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            CircleAvatar(
-                              backgroundColor: Colors.white,
-                              radius: 20,
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/ui.png",
-                                  height: 20,
-                                  width: 20,
-                                  color: Color.fromARGB(255, 95, 209, 211),
+                    InkWell(
+                      child: Container(
+                        height: 150,
+                        width: 150,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(22),
+                          color: Color.fromARGB(255, 95, 209, 211),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              CircleAvatar(
+                                backgroundColor: Colors.white,
+                                radius: 20,
+                                child: Center(
+                                  child: Image.asset(
+                                    "assets/ui.png",
+                                    height: 20,
+                                    width: 20,
+                                    color: Color.fromARGB(255, 95, 209, 211),
+                                  ),
                                 ),
                               ),
-                            ),
-                            Text(
-                              "User experience design",
-                              style: GoogleFonts.poppins(
-                                  color: Colors.white, fontSize: 16),
-                            ),
-                            SizedBox(
-                              height: 9,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(20),
-                                child: LinearProgressIndicator(
-                                  value: 0.4, // Represents 40% progress
-                                  backgroundColor: const Color.fromARGB(
-                                      255,
-                                      216,
-                                      213,
-                                      213), // Optional background color
-                                  valueColor: AlwaysStoppedAnimation<Color>(
-                                      Colors.white), // Progress bar color
+                              Text(
+                                "User experience design",
+                                style: GoogleFonts.poppins(
+                                    color: Colors.white, fontSize: 16),
+                              ),
+                              SizedBox(
+                                height: 9,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(20),
+                                  child: LinearProgressIndicator(
+                                    value: 0.4, // Represents 40% progress
+                                    backgroundColor: const Color.fromARGB(
+                                        255,
+                                        216,
+                                        213,
+                                        213), // Optional background color
+                                    valueColor: AlwaysStoppedAnimation<Color>(
+                                        Colors.white), // Progress bar color
+                                  ),
                                 ),
                               ),
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  "Progress",
-                                  style: GoogleFonts.poppins(
-                                      color: Colors.white, fontSize: 14),
-                                ),
-                                Text(
-                                  "40%",
-                                  style: GoogleFonts.poppins(
-                                      color: Colors.white, fontSize: 14),
-                                )
-                              ],
-                            )
-                          ],
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Progress",
+                                    style: GoogleFonts.poppins(
+                                        color: Colors.white, fontSize: 14),
+                                  ),
+                                  Text(
+                                    "40%",
+                                    style: GoogleFonts.poppins(
+                                        color: Colors.white, fontSize: 14),
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
                         ),
                       ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            CupertinoPageRoute(
+                                builder: (context) => TaskPage()));
+                      },
                     ),
                     Container(
                       height: 150,
