@@ -21,8 +21,8 @@ class _TaskPageState extends State<TaskPage> {
           children: [
             InkWell(
               child: Container(
-                height: 30,
-                width: 30,
+                height: 40,
+                width: 40,
                 decoration: BoxDecoration(
                     color: const Color.fromARGB(255, 233, 228, 228),
                     borderRadius: BorderRadius.circular(10)),
