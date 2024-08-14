@@ -19,14 +19,18 @@ class _TaskPageState extends State<TaskPage> {
         automaticallyImplyLeading: false,
         title: Row(
           children: [
-            Container(
-              height: 30,
-              width: 30,
-              decoration: BoxDecoration(
-                  color: Colors.grey, borderRadius: BorderRadius.circular(10)),
-              child: Center(
-                child: Icon(CupertinoIcons.back),
+            InkWell(
+              child: Container(
+                height: 30,
+                width: 30,
+                decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 233, 228, 228),
+                    borderRadius: BorderRadius.circular(10)),
+                child: Center(
+                  child: Icon(CupertinoIcons.back),
+                ),
               ),
+              onTap: () => Navigator.pop(context),
             ),
             SizedBox(
               width: 50,
