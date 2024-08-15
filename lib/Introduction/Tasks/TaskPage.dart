@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -89,6 +89,29 @@ class _TaskPageState extends State<TaskPage> {
                         ),
                       ),
                     ),
+                  ],
+                ),
+                SizedBox(height: 30),
+                Row(
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        CircleAvatar(
+                          radius: 5,
+                          backgroundColor: Color.fromARGB(255, 95, 209, 211),
+                        ),
+                        CircleAvatar(
+                          radius: 5,
+                          backgroundColor: Color.fromARGB(255, 205, 102, 61),
+                        ),
+                        CircleAvatar(
+                          radius: 5,
+                          backgroundColor: Color.fromARGB(255, 96, 20, 190),
+                        ),
+                      ],
+                    )
                   ],
                 )
               ],
