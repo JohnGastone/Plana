@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -94,23 +95,73 @@ class _TaskPageState extends State<TaskPage> {
                 SizedBox(height: 30),
                 Row(
                   children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        CircleAvatar(
-                          radius: 5,
-                          backgroundColor: Color.fromARGB(255, 95, 209, 211),
+                    // Here pie chart from fl_charts
+                    SizedBox(
+                      height: 200, // Adjust height as necessary
+                      width: 200, // Adjust width as necessary
+                      child: PieChart(
+                        PieChartData(
+                          sections: [
+                            PieChartSectionData(
+                              color: Color.fromARGB(255, 95, 209, 211),
+                              value: 40,
+                              title: '40%',
+                              radius: 50,
+                              titleStyle: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                            PieChartSectionData(
+                              color: Color.fromARGB(255, 205, 102, 61),
+                              value: 30,
+                              title: '30%',
+                              radius: 50,
+                              titleStyle: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                            PieChartSectionData(
+                              color: Color.fromARGB(255, 96, 20, 190),
+                              value: 30,
+                              title: '30%',
+                              radius: 50,
+                              titleStyle: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
                         ),
-                        CircleAvatar(
-                          radius: 5,
-                          backgroundColor: Color.fromARGB(255, 205, 102, 61),
-                        ),
-                        CircleAvatar(
-                          radius: 5,
-                          backgroundColor: Color.fromARGB(255, 96, 20, 190),
-                        ),
-                      ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 30,
+                    ),
+                    SizedBox(
+                      height: 200,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          CircleAvatar(
+                            radius: 5,
+                            backgroundColor: Color.fromARGB(255, 95, 209, 211),
+                          ),
+                          CircleAvatar(
+                            radius: 5,
+                            backgroundColor: Color.fromARGB(255, 205, 102, 61),
+                          ),
+                          CircleAvatar(
+                            radius: 5,
+                            backgroundColor: Color.fromARGB(255, 96, 20, 190),
+                          ),
+                        ],
+                      ),
                     )
                   ],
                 )
