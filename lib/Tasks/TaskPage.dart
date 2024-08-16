@@ -49,6 +49,7 @@ class _TaskPageState extends State<TaskPage> {
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Center(
                   child: Text(
@@ -203,7 +204,87 @@ class _TaskPageState extends State<TaskPage> {
                       ),
                     )
                   ],
-                )
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Text("Description",
+                    style: GoogleFonts.poppins(
+                        fontSize: 22, fontWeight: FontWeight.bold)),
+                SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non mauris ac justo faucibus fermentum. Donec condimentum, metus et ultricies vulputate, mauris ex sodales neque, vel dignissim dolor velit nec purus. Sed facilisis neque vel massa semper, et mollis velit faucibus. Sed sed nisi vel nunc gravida consectetur.",
+                  style: GoogleFonts.poppins(fontSize: 18),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Text("Sub Task",
+                    style: GoogleFonts.poppins(
+                        fontSize: 22, fontWeight: FontWeight.bold)),
+                SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  height: 80,
+                  width: 320,
+                  decoration: BoxDecoration(
+                      color: const Color.fromARGB(31, 137, 126, 126),
+                      borderRadius: BorderRadius.circular(22)),
+                  child: Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 8.0),
+                      child: Row(
+                        children: [
+                          Container(
+                            height: 40,
+                            width: 40,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color.fromARGB(255, 179, 210, 210),
+                            ),
+                            child: Center(
+                              child: Image.asset(
+                                "assets/marketing.png",
+                                height: 25,
+                                width: 25,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Social Media Marketing",
+                                style: GoogleFonts.poppins(
+                                    fontSize: 16, fontWeight: FontWeight.w600),
+                              ),
+                              Text(
+                                "23 Oct 2024",
+                                style: GoogleFonts.poppins(
+                                    fontSize: 15, color: Colors.grey),
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 85.0),
+                            child: IconButton(
+                                onPressed: () {}, icon: Icon(Icons.more_vert)),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
