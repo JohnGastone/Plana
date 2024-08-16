@@ -252,6 +252,7 @@ class _TaskPageState extends State<TaskPage> {
                             ),
                             child: Center(
                                 child: Checkbox(
+                              checkColor: Color.fromARGB(255, 95, 209, 211),
                               value:
                                   isChecked, // A boolean variable to track the checked state
                               onChanged: (bool? newValue) {
@@ -317,6 +318,7 @@ class _TaskPageState extends State<TaskPage> {
                             ),
                             child: Center(
                                 child: Checkbox(
+                              checkColor: Color.fromARGB(255, 205, 102, 61),
                               value:
                                   isChecked2, // A boolean variable to track the checked state
                               onChanged: (bool? newValue) {
@@ -382,6 +384,9 @@ class _TaskPageState extends State<TaskPage> {
                             ),
                             child: Center(
                                 child: Checkbox(
+                              // fillColor:
+                              //     WidgetStateProperty.all(Colors.grey[40]),
+                              checkColor: Color.fromARGB(255, 96, 20, 190),
                               value:
                                   isChecked3, // A boolean variable to track the checked state
                               onChanged: (bool? newValue) {
