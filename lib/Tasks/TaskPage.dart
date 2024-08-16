@@ -140,25 +140,64 @@ class _TaskPageState extends State<TaskPage> {
                       ),
                     ),
                     SizedBox(
-                      width: 30,
+                      width: 10,
                     ),
                     SizedBox(
-                      height: 200,
+                      height: 160,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          CircleAvatar(
-                            radius: 5,
-                            backgroundColor: Color.fromARGB(255, 95, 209, 211),
+                          Row(
+                            children: [
+                              CircleAvatar(
+                                radius: 5,
+                                backgroundColor:
+                                    Color.fromARGB(255, 95, 209, 211),
+                              ),
+                              SizedBox(
+                                width: 3,
+                              ),
+                              Text(
+                                "Finish on time",
+                                style: GoogleFonts.poppins(
+                                    fontSize: 15, color: Colors.grey),
+                              )
+                            ],
                           ),
-                          CircleAvatar(
-                            radius: 5,
-                            backgroundColor: Color.fromARGB(255, 205, 102, 61),
+                          Row(
+                            children: [
+                              CircleAvatar(
+                                radius: 5,
+                                backgroundColor:
+                                    Color.fromARGB(255, 205, 102, 61),
+                              ),
+                              SizedBox(
+                                width: 3,
+                              ),
+                              Text(
+                                "Past the deadline",
+                                style: GoogleFonts.poppins(
+                                    fontSize: 15, color: Colors.grey),
+                              )
+                            ],
                           ),
-                          CircleAvatar(
-                            radius: 5,
-                            backgroundColor: Color.fromARGB(255, 96, 20, 190),
+                          Row(
+                            children: [
+                              CircleAvatar(
+                                radius: 5,
+                                backgroundColor:
+                                    Color.fromARGB(255, 96, 20, 190),
+                              ),
+                              SizedBox(
+                                width: 3,
+                              ),
+                              Text(
+                                "Still ongoing",
+                                style: GoogleFonts.poppins(
+                                    fontSize: 15, color: Colors.grey),
+                              )
+                            ],
                           ),
                         ],
                       ),
