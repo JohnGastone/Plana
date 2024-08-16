@@ -216,7 +216,7 @@ class _TaskPageState extends State<TaskPage> {
                   height: 20,
                 ),
                 Text(
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non mauris ac justo faucibus fermentum. Donec condimentum, metus et ultricies vulputate, mauris ex sodales neque, vel dignissim dolor velit nec purus. Sed facilisis neque vel massa semper, et mollis velit faucibus. Sed sed nisi vel nunc gravida consectetur.",
+                  "Conduct user research and create wireframes for the new onboarding flow. Ensure the design is intuitive, engaging, and aligns with the app's overall aesthetic.",
                   style: GoogleFonts.poppins(fontSize: 18),
                 ),
                 SizedBox(
