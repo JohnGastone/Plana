@@ -14,6 +14,9 @@ class TaskPage extends StatefulWidget {
 
 class _TaskPageState extends State<TaskPage> {
   bool isChecked = false;
+  bool isChecked2 = false;
+  bool isChecked3 = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,7 +97,7 @@ class _TaskPageState extends State<TaskPage> {
                     ),
                   ],
                 ),
-                SizedBox(height: 30),
+                SizedBox(height: 15),
                 Row(
                   children: [
                     // Here pie chart from fl_charts
@@ -161,7 +164,7 @@ class _TaskPageState extends State<TaskPage> {
                                 width: 3,
                               ),
                               Text(
-                                "Finish on time",
+                                "UI Components",
                                 style: GoogleFonts.poppins(
                                     fontSize: 15, color: Colors.grey),
                               )
@@ -178,7 +181,7 @@ class _TaskPageState extends State<TaskPage> {
                                 width: 3,
                               ),
                               Text(
-                                "Past the deadline",
+                                "Visualizing UX",
                                 style: GoogleFonts.poppins(
                                     fontSize: 15, color: Colors.grey),
                               )
@@ -195,7 +198,7 @@ class _TaskPageState extends State<TaskPage> {
                                 width: 3,
                               ),
                               Text(
-                                "Still ongoing",
+                                "Case Study",
                                 style: GoogleFonts.poppins(
                                     fontSize: 15, color: Colors.grey),
                               )
@@ -315,10 +318,10 @@ class _TaskPageState extends State<TaskPage> {
                             child: Center(
                                 child: Checkbox(
                               value:
-                                  isChecked, // A boolean variable to track the checked state
+                                  isChecked2, // A boolean variable to track the checked state
                               onChanged: (bool? newValue) {
                                 setState(() {
-                                  isChecked =
+                                  isChecked2 =
                                       newValue!; // Update the checked state
                                 });
                               },
@@ -344,6 +347,71 @@ class _TaskPageState extends State<TaskPage> {
                           ),
                           SizedBox(
                             width: 80,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 85.0),
+                            child: IconButton(
+                                onPressed: () {}, icon: Icon(Icons.more_vert)),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  height: 80,
+                  width: 320,
+                  decoration: BoxDecoration(
+                      color: const Color.fromARGB(31, 137, 126, 126),
+                      borderRadius: BorderRadius.circular(22)),
+                  child: Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 8.0),
+                      child: Row(
+                        children: [
+                          Container(
+                            height: 40,
+                            width: 40,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color.fromARGB(255, 179, 210, 210),
+                            ),
+                            child: Center(
+                                child: Checkbox(
+                              value:
+                                  isChecked3, // A boolean variable to track the checked state
+                              onChanged: (bool? newValue) {
+                                setState(() {
+                                  isChecked3 =
+                                      newValue!; // Update the checked state
+                                });
+                              },
+                            )),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "eCommerce Case Study",
+                                style: GoogleFonts.poppins(
+                                    fontSize: 16, fontWeight: FontWeight.w600),
+                              ),
+                              Text(
+                                "23 Oct 2024",
+                                style: GoogleFonts.poppins(
+                                    fontSize: 15, color: Colors.grey),
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            width: 4,
                           ),
                           Padding(
                             padding: const EdgeInsets.only(bottom: 85.0),
