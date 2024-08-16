@@ -13,6 +13,7 @@ class TaskPage extends StatefulWidget {
 }
 
 class _TaskPageState extends State<TaskPage> {
+  bool isChecked = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -221,7 +222,7 @@ class _TaskPageState extends State<TaskPage> {
                 SizedBox(
                   height: 20,
                 ),
-                Text("Sub Task",
+                Text("Sub Tasks",
                     style: GoogleFonts.poppins(
                         fontSize: 22, fontWeight: FontWeight.bold)),
                 SizedBox(
@@ -247,12 +248,16 @@ class _TaskPageState extends State<TaskPage> {
                               color: Color.fromARGB(255, 179, 210, 210),
                             ),
                             child: Center(
-                              child: Image.asset(
-                                "assets/marketing.png",
-                                height: 25,
-                                width: 25,
-                              ),
-                            ),
+                                child: Checkbox(
+                              value:
+                                  isChecked, // A boolean variable to track the checked state
+                              onChanged: (bool? newValue) {
+                                setState(() {
+                                  isChecked =
+                                      newValue!; // Update the checked state
+                                });
+                              },
+                            )),
                           ),
                           SizedBox(
                             width: 10,
@@ -261,7 +266,7 @@ class _TaskPageState extends State<TaskPage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                "Social Media Marketing",
+                                "UI Components",
                                 style: GoogleFonts.poppins(
                                     fontSize: 16, fontWeight: FontWeight.w600),
                               ),
@@ -273,7 +278,72 @@ class _TaskPageState extends State<TaskPage> {
                             ],
                           ),
                           SizedBox(
-                            width: 30,
+                            width: 80,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 85.0),
+                            child: IconButton(
+                                onPressed: () {}, icon: Icon(Icons.more_vert)),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  height: 80,
+                  width: 320,
+                  decoration: BoxDecoration(
+                      color: const Color.fromARGB(31, 137, 126, 126),
+                      borderRadius: BorderRadius.circular(22)),
+                  child: Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 8.0),
+                      child: Row(
+                        children: [
+                          Container(
+                            height: 40,
+                            width: 40,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color.fromARGB(255, 179, 210, 210),
+                            ),
+                            child: Center(
+                                child: Checkbox(
+                              value:
+                                  isChecked, // A boolean variable to track the checked state
+                              onChanged: (bool? newValue) {
+                                setState(() {
+                                  isChecked =
+                                      newValue!; // Update the checked state
+                                });
+                              },
+                            )),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Introducing UX",
+                                style: GoogleFonts.poppins(
+                                    fontSize: 16, fontWeight: FontWeight.w600),
+                              ),
+                              Text(
+                                "23 Oct 2024",
+                                style: GoogleFonts.poppins(
+                                    fontSize: 15, color: Colors.grey),
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            width: 80,
                           ),
                           Padding(
                             padding: const EdgeInsets.only(bottom: 85.0),
