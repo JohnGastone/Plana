@@ -331,7 +331,7 @@ class _TaskPageState extends State<TaskPage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                "Introducing UX",
+                                "Visualizing UX",
                                 style: GoogleFonts.poppins(
                                     fontSize: 16, fontWeight: FontWeight.w600),
                               ),
