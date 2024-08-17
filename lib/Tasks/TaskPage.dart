@@ -384,15 +384,11 @@ class _TaskPageState extends State<TaskPage> {
                             ),
                             child: Center(
                                 child: Checkbox(
-                              // fillColor:
-                              //     WidgetStateProperty.all(Colors.grey[40]),
                               checkColor: Color.fromARGB(255, 96, 20, 190),
-                              value:
-                                  isChecked3, // A boolean variable to track the checked state
+                              value: isChecked3,
                               onChanged: (bool? newValue) {
                                 setState(() {
-                                  isChecked3 =
-                                      newValue!; // Update the checked state
+                                  isChecked3 = newValue!;
                                 });
                               },
                             )),
