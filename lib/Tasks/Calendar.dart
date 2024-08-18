@@ -77,18 +77,18 @@ class _MyCalendarState extends State<MyCalendar> {
                 _focusedDay = focusedDay;
               },
               calendarStyle: CalendarStyle(
-                defaultTextStyle: TextStyle(color: Colors.white),
-                weekendTextStyle: TextStyle(color: Colors.white),
+                defaultTextStyle: GoogleFonts.poppins(color: Colors.white),
+                weekendTextStyle: GoogleFonts.poppins(color: Colors.white),
                 selectedDecoration: BoxDecoration(
                   color: Colors.white,
                   shape: BoxShape.circle,
                 ),
-                selectedTextStyle: TextStyle(color: Colors.cyan),
+                selectedTextStyle: GoogleFonts.poppins(color: Colors.cyan),
                 todayDecoration: BoxDecoration(
                   color: Colors.white.withOpacity(0.3),
                   shape: BoxShape.circle,
                 ),
-                todayTextStyle: TextStyle(color: Colors.white),
+                todayTextStyle: GoogleFonts.poppins(color: Colors.white),
               ),
               headerStyle: HeaderStyle(
                 formatButtonVisible: false,
@@ -96,11 +96,11 @@ class _MyCalendarState extends State<MyCalendar> {
                 leftChevronIcon: Icon(Icons.chevron_left, color: Colors.white),
                 rightChevronIcon:
                     Icon(Icons.chevron_right, color: Colors.white),
-                titleTextStyle: TextStyle(color: Colors.white),
+                titleTextStyle: GoogleFonts.poppins(color: Colors.white),
               ),
               daysOfWeekStyle: DaysOfWeekStyle(
-                weekdayStyle: TextStyle(color: Colors.white),
-                weekendStyle: TextStyle(color: Colors.white),
+                weekdayStyle: GoogleFonts.poppins(color: Colors.white),
+                weekendStyle: GoogleFonts.poppins(color: Colors.white),
               ),
             ),
           ),
