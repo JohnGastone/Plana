@@ -16,6 +16,7 @@ class _MyCalendarState extends State<MyCalendar> {
   CalendarFormat _calendarFormat = CalendarFormat.week;
   DateTime _focusedDay = DateTime.now();
   DateTime? _selectedDay;
+  String _selectedTaskType = 'All'; // Add this line
 
   @override
   Widget build(BuildContext context) {
@@ -105,7 +106,6 @@ class _MyCalendarState extends State<MyCalendar> {
               ),
             ),
           ),
-          // Add your other widgets here
           Expanded(
             child: Column(
               children: [
@@ -127,18 +127,33 @@ class _MyCalendarState extends State<MyCalendar> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          _buildTypeButton('All', true),
-          _buildTypeButton('Ongoing', false),
-          _buildTypeButton('Completed', false),
+          _buildTypeButton('All', _selectedTaskType == 'All'),
+          _buildTypeButton('Ongoing', _selectedTaskType == 'Ongoing'),
+          _buildTypeButton('Completed', _selectedTaskType == 'Completed'),
         ],
       ),
     );
   }
 
+  Widget _buildTaskList() {
+    switch (_selectedTaskType) {
+      case 'All':
+        return _buildAllTaskList();
+      case 'Ongoing':
+        return _buildOngoingTaskList();
+      case 'Completed':
+        return _buildCompletedTaskList();
+      default:
+        return _buildAllTaskList();
+    }
+  }
+
   Widget _buildTypeButton(String text, bool isSelected) {
     return ElevatedButton(
       onPressed: () {
-        // Implement selection logic
+        setState(() {
+          _selectedTaskType = text;
+        });
       },
       style: ElevatedButton.styleFrom(
         backgroundColor: isSelected ? Colors.orange : Colors.grey[200],
@@ -152,7 +167,7 @@ class _MyCalendarState extends State<MyCalendar> {
     );
   }
 
-  Widget _buildTaskList() {
+  Widget _buildAllTaskList() {
     return ListView(
       children: [
         _buildTimelineItem(
@@ -166,7 +181,7 @@ class _MyCalendarState extends State<MyCalendar> {
         _buildTimelineItem(
           '10:00 AM',
           'Dashboard redesign',
-          '11AM-01PM',
+          '1AM-01PM',
           Colors.blue,
           0.59,
           false,
@@ -231,24 +246,110 @@ class _MyCalendarState extends State<MyCalendar> {
     );
   }
 
-  Widget _buildTimelineItem(String time, String title, String duration,
+  Widget _buildOngoingTaskList() {
+    return ListView(
+      children: [
+        _buildTimelineItem(
+          '02:00 PM',
+          'Education app design',
+          '02PM-03PM',
+          Colors.purple,
+          0.30,
+          false,
+        ),
+        _buildTimelineItem(
+          '09:00 AM',
+          'Landing page design',
+          '09AM-11AM',
+          Colors.orange,
+          1.0,
+          true,
+        ),
+        _buildTimelineItem(
+          '10:00 AM',
+          'Dashboard redesign',
+          '11AM-01PM',
+          Colors.blue,
+          0.59,
+          false,
+        ),
+        _buildTimelineItem(
+          '02:00 PM',
+          'Education app design',
+          '02PM-03PM',
+          Colors.purple,
+          0.30,
+          false,
+        ),
+      ],
+    );
+  }
+
+  Widget _buildCompletedTaskList() {
+    return ListView(
+      children: [
+        _buildTimelineItem(
+          '09:00 AM',
+          'Landing page design',
+          '09AM-11AM',
+          Colors.orange,
+          1.0,
+          true,
+        ),
+        _buildTimelineItem(
+          '10:00 AM',
+          'Dashboard redesign',
+          '1AM-01PM',
+          Colors.blue,
+          0.59,
+          false,
+        ),
+        _buildTimelineItem(
+          '02:00 PM',
+          'Education app design',
+          '02PM-03PM',
+          Colors.purple,
+          0.30,
+          false,
+        ),
+        _buildTimelineItem(
+          '09:00 AM',
+          'Landing page design',
+          '09AM-11AM',
+          Colors.orange,
+          1.0,
+          true,
+        ),
+        _buildTimelineItem(
+          '10:00 AM',
+          'Dashboard redesign',
+          '11AM-01PM',
+          Colors.blue,
+          0.59,
+          false,
+        ),
+      ],
+    );
+  }
+
+  Widget _buildTimelineItem(String startTime, String title, String duration,
       Color color, double progress, bool isCompleted) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
-          width: 10,
+          width: 20,
         ),
         SizedBox(
           width: 60,
-          child: Text(time,
+          child: Text(startTime,
               style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
         ),
         SizedBox(
           width: 5,
         ),
         Container(
-          width: 280,
+          width: 250,
           height: 100,
           margin: EdgeInsets.only(bottom: 20),
           padding: EdgeInsets.all(10),
