@@ -15,6 +15,8 @@ class Onboardingcarousel extends StatelessWidget {
   Widget build(BuildContext context) {
     return OnBoardingSlider(
       finishButtonText: 'Get Organized',
+      finishButtonTextStyle:
+          GoogleFonts.poppins(color: Colors.white, fontSize: 20),
       onFinish: () {
         Navigator.push(
           context,
