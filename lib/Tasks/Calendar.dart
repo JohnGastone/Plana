@@ -96,7 +96,8 @@ class _MyCalendarState extends State<MyCalendar> {
                 leftChevronIcon: Icon(Icons.chevron_left, color: Colors.white),
                 rightChevronIcon:
                     Icon(Icons.chevron_right, color: Colors.white),
-                titleTextStyle: GoogleFonts.poppins(color: Colors.white),
+                titleTextStyle:
+                    GoogleFonts.poppins(fontSize: 20, color: Colors.white),
               ),
               daysOfWeekStyle: DaysOfWeekStyle(
                 weekdayStyle: GoogleFonts.poppins(color: Colors.white),
@@ -105,8 +106,191 @@ class _MyCalendarState extends State<MyCalendar> {
             ),
           ),
           // Add your other widgets here
+          Expanded(
+            child: Column(
+              children: [
+                _buildTaskTypeSelector(),
+                Expanded(
+                  child: _buildTaskList(),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
+    );
+  }
+
+  Widget _buildTaskTypeSelector() {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          _buildTypeButton('All', true),
+          _buildTypeButton('Ongoing', false),
+          _buildTypeButton('Completed', false),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildTypeButton(String text, bool isSelected) {
+    return ElevatedButton(
+      onPressed: () {
+        // Implement selection logic
+      },
+      style: ElevatedButton.styleFrom(
+        backgroundColor: isSelected ? Colors.orange : Colors.grey[200],
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      ),
+      child: Text(
+        text,
+        style: GoogleFonts.poppins(
+            color: isSelected ? Colors.white : Colors.black),
+      ),
+    );
+  }
+
+  Widget _buildTaskList() {
+    return ListView(
+      children: [
+        _buildTimelineItem(
+          '09:00 AM',
+          'Landing page design',
+          '09AM-11AM',
+          Colors.orange,
+          1.0,
+          true,
+        ),
+        _buildTimelineItem(
+          '10:00 AM',
+          'Dashboard redesign',
+          '11AM-01PM',
+          Colors.blue,
+          0.59,
+          false,
+        ),
+        _buildTimelineItem(
+          '02:00 PM',
+          'Education app design',
+          '02PM-03PM',
+          Colors.purple,
+          0.30,
+          false,
+        ),
+        _buildTimelineItem(
+          '09:00 AM',
+          'Landing page design',
+          '09AM-11AM',
+          Colors.orange,
+          1.0,
+          true,
+        ),
+        _buildTimelineItem(
+          '10:00 AM',
+          'Dashboard redesign',
+          '11AM-01PM',
+          Colors.blue,
+          0.59,
+          false,
+        ),
+        _buildTimelineItem(
+          '02:00 PM',
+          'Education app design',
+          '02PM-03PM',
+          Colors.purple,
+          0.30,
+          false,
+        ),
+        _buildTimelineItem(
+          '09:00 AM',
+          'Landing page design',
+          '09AM-11AM',
+          Colors.orange,
+          1.0,
+          true,
+        ),
+        _buildTimelineItem(
+          '10:00 AM',
+          'Dashboard redesign',
+          '11AM-01PM',
+          Colors.blue,
+          0.59,
+          false,
+        ),
+        _buildTimelineItem(
+          '02:00 PM',
+          'Education app design',
+          '02PM-03PM',
+          Colors.purple,
+          0.30,
+          false,
+        ),
+      ],
+    );
+  }
+
+  Widget _buildTimelineItem(String time, String title, String duration,
+      Color color, double progress, bool isCompleted) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(
+          width: 10,
+        ),
+        SizedBox(
+          width: 60,
+          child: Text(time,
+              style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
+        ),
+        SizedBox(
+          width: 5,
+        ),
+        Container(
+          width: 280,
+          height: 100,
+          margin: EdgeInsets.only(bottom: 20),
+          padding: EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            color: color.withOpacity(0.1),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(title,
+                      style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
+                  Icon(Icons.more_vert),
+                ],
+              ),
+              SizedBox(height: 5),
+              Row(
+                children: [
+                  Icon(isCompleted ? Icons.check_circle : Icons.access_time,
+                      size: 16, color: color),
+                  SizedBox(width: 5),
+                  Text(duration,
+                      style: GoogleFonts.poppins(color: Colors.grey)),
+                ],
+              ),
+              SizedBox(height: 5),
+              LinearProgressIndicator(
+                value: progress,
+                backgroundColor: Colors.grey[300],
+                valueColor: AlwaysStoppedAnimation<Color>(color),
+              ),
+              SizedBox(height: 5),
+              Text('${(progress * 100).toInt()}%',
+                  style: GoogleFonts.poppins(
+                      color: color, fontWeight: FontWeight.bold)),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
