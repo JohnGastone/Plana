@@ -5,6 +5,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:plana/Tasks/Calendar.dart';
 
 import '../../Tasks/TaskPage.dart';
 
@@ -35,6 +36,26 @@ class _HomePageState extends State<HomePage> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+
+      switch (_selectedIndex) {
+        case 0:
+          Navigator.push(
+              context, CupertinoPageRoute(builder: (context) => HomePage()));
+          break;
+        case 1:
+          // Navigate to the second screen, e.g., StatsPage
+          Navigator.push(
+              context, CupertinoPageRoute(builder: (context) => MyCalendar()));
+          break;
+        case 2:
+          // Navigate to the third screen, e.g., ProfilePage
+          Navigator.push(
+              context, CupertinoPageRoute(builder: (context) => MyCalendar()));
+          break;
+        default:
+          // Handle any other case, if necessary
+          break;
+      }
     });
   }
 
