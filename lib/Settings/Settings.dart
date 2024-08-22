@@ -33,7 +33,7 @@ class _SettingsPageState extends State<SettingsPage> {
               onTap: () => Navigator.pop(context),
             ),
             SizedBox(
-              width: 50,
+              width: 80,
             ),
             Text(
               "Settings",
