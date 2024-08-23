@@ -17,12 +17,10 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
-    final theme = Theme.of(context); // Get the current theme
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      themeMode:
-          themeProvider.themeMode, // Get the theme mode from the provider
+      themeMode: themeProvider.themeMode,
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
       home: Scaffold(
@@ -38,12 +36,7 @@ class _SettingsPageState extends State<SettingsPage> {
                       color: const Color.fromARGB(255, 233, 228, 228),
                       borderRadius: BorderRadius.circular(10)),
                   child: Center(
-                    child: Icon(
-                      CupertinoIcons.back,
-                      color: theme.brightness == Brightness.light
-                          ? Colors.black
-                          : Colors.white,
-                    ),
+                    child: Icon(CupertinoIcons.back),
                   ),
                 ),
                 onTap: () => Navigator.pop(context),
@@ -73,13 +66,10 @@ class _SettingsPageState extends State<SettingsPage> {
                     height: 30,
                     width: 30,
                     child: Switch(
-                      value: themeProvider.themeMode ==
-                          ThemeMode
-                              .dark, // Get the theme mode from the provider
+                      value: themeProvider.themeMode == ThemeMode.dark,
                       activeColor: Color.fromARGB(255, 50, 48, 46),
                       onChanged: (bool value) {
-                        themeProvider
-                            .toggleTheme(); // Toggle theme in the provider
+                        themeProvider.toggleTheme();
                       },
                     ),
                   ),
