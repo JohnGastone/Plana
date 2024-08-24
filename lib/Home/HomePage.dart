@@ -130,9 +130,9 @@ class _HomePageState extends State<HomePage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "Your today's task \n is almost done!",
+                                  "Your today's priority  \ntask is almost done!",
                                   style: GoogleFonts.poppins(
-                                      color: Colors.white, fontSize: 20),
+                                      color: Colors.white, fontSize: 18),
                                 ),
                                 SizedBox(
                                   height: 35,
@@ -152,9 +152,8 @@ class _HomePageState extends State<HomePage> {
                                 )
                               ],
                             ),
-                            // Here the progress bar should be placed
                             SizedBox(
-                              width: 90,
+                              width: 80,
                               height: 80,
                               child: Stack(
                                 alignment: Alignment.center,
@@ -168,10 +167,9 @@ class _HomePageState extends State<HomePage> {
                                     strokeWidth: 5,
                                   ),
                                   Text(
-                                    '${(_progress * 100).round()}%', // Calculate and display percentage
+                                    '${(_progress * 100).round()}%',
                                     style: TextStyle(
-                                      color: Colors
-                                          .white, // Or any color that contrasts well with your progress bar
+                                      color: Colors.white,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
@@ -183,7 +181,7 @@ class _HomePageState extends State<HomePage> {
                               child: IconButton(
                                   onPressed: () {},
                                   icon: Icon(
-                                    Icons.more_vert,
+                                    CupertinoIcons.pin,
                                     color: Colors.white,
                                   )),
                             )
