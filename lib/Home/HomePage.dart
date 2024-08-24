@@ -605,7 +605,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 8),
+                    SizedBox(height: 5),
                     Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
