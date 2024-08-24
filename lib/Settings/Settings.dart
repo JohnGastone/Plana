@@ -17,7 +17,7 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
-
+    final theme = Theme.of(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       themeMode: themeProvider.themeMode,
@@ -36,7 +36,12 @@ class _SettingsPageState extends State<SettingsPage> {
                       color: const Color.fromARGB(255, 233, 228, 228),
                       borderRadius: BorderRadius.circular(10)),
                   child: Center(
-                    child: Icon(CupertinoIcons.back),
+                    child: Icon(
+                      CupertinoIcons.back,
+                      color: theme.brightness == Brightness.light
+                          ? Colors.white
+                          : Colors.black,
+                    ),
                   ),
                 ),
                 onTap: () => Navigator.pop(context),
