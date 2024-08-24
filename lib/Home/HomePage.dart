@@ -585,13 +585,13 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   children: [
                     Positioned(
-                      top: -20, // Adjust this value to control the height
+                      top: -20,
                       left: 0,
                       right: 0,
                       child: Align(
                         alignment: Alignment.topCenter,
                         child: CircleAvatar(
-                          radius: 20, // Adjust the radius as needed
+                          radius: 20,
                           backgroundColor: Color.fromARGB(255, 95, 209, 211),
                           child: FloatingActionButton(
                             backgroundColor: Colors.transparent,
@@ -605,7 +605,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 5),
+                    SizedBox(height: 8),
                     Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
