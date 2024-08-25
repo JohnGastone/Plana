@@ -38,19 +38,19 @@ class _HomePageState extends State<HomePage> {
 
       switch (_selectedIndex) {
         case 0:
-          Navigator.push(
+          Navigator.pushReplacement(
               context, CupertinoPageRoute(builder: (context) => HomePage()));
           break;
         case 1:
-          Navigator.push(
+          Navigator.pushReplacement(
               context, CupertinoPageRoute(builder: (context) => MyCalendar()));
           break;
         case 2:
-          Navigator.push(
+          Navigator.pushReplacement(
               context, CupertinoPageRoute(builder: (context) => HomePage()));
           break;
         case 3:
-          Navigator.push(context,
+          Navigator.pushReplacement(context,
               CupertinoPageRoute(builder: (context) => SettingsPage()));
           break;
         default:
@@ -623,7 +623,6 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                       child: BottomNavigationBar(
-                        // This should be at the bottom
                         currentIndex: _selectedIndex,
                         onTap: _onItemTapped,
                         selectedLabelStyle: GoogleFonts.poppins(),
