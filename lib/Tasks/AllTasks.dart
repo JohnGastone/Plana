@@ -20,6 +20,7 @@ class _AlltasksPageState extends State<AlltasksPage> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             InkWell(
               child: Container(
@@ -39,14 +40,26 @@ class _AlltasksPageState extends State<AlltasksPage> {
               ),
               onTap: () => Navigator.pop(context),
             ),
-            SizedBox(
-              width: 50,
-            ),
             Text(
               "All Tasks",
               style: GoogleFonts.poppins(
                   fontSize: 22, fontWeight: FontWeight.bold),
-            )
+            ),
+            Container(
+              height: 40,
+              width: 40,
+              decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 233, 228, 228),
+                  borderRadius: BorderRadius.circular(10)),
+              child: Center(
+                child: Icon(
+                  CupertinoIcons.back,
+                  color: theme.brightness == Brightness.light
+                      ? Colors.white
+                      : Colors.black,
+                ),
+              ),
+            ),
           ],
         ),
       ),
