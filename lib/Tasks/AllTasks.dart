@@ -53,7 +53,7 @@ class _AlltasksPageState extends State<AlltasksPage> {
                   borderRadius: BorderRadius.circular(10)),
               child: Center(
                 child: Icon(
-                  CupertinoIcons.back,
+                  CupertinoIcons.search,
                   color: theme.brightness == Brightness.light
                       ? Colors.white
                       : Colors.black,
