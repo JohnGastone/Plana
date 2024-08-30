@@ -83,20 +83,16 @@ class _AlltasksPageState extends State<AlltasksPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          CircleAvatar(
-                            backgroundColor: Colors.white,
-                            radius: 20,
-                            child: Center(
-                              child: Image.asset(
-                                "assets/ui.png",
-                                height: 20,
-                                width: 20,
-                                color: Color.fromARGB(255, 95, 209, 211),
-                              ),
-                            ),
+                          Text(
+                            "Ongoing",
+                            style: GoogleFonts.poppins(
+                                fontSize: 23, color: Colors.green),
                           ),
                           Icon(Icons.more_vert)
                         ],
+                      ),
+                      Divider(
+                        color: const Color.fromARGB(255, 176, 175, 175),
                       ),
                       Text(
                         "Python Pandas",
