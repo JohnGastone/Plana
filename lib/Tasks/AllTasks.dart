@@ -33,8 +33,8 @@ class _AlltasksPageState extends State<AlltasksPage> {
                   child: Icon(
                     CupertinoIcons.back,
                     color: theme.brightness == Brightness.light
-                        ? Colors.white
-                        : Colors.black,
+                        ? Colors.black
+                        : Colors.white,
                   ),
                 ),
               ),
