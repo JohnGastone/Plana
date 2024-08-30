@@ -377,12 +377,20 @@ class _HomePageState extends State<HomePage> {
                         style: GoogleFonts.poppins(
                             fontSize: 20, fontWeight: FontWeight.bold),
                       ),
-                      Text(
-                        "See All",
-                        style: GoogleFonts.poppins(
-                            color: Colors.grey,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w400),
+                      InkWell(
+                        child: Text(
+                          "See All",
+                          style: GoogleFonts.poppins(
+                              color: Colors.grey,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w400),
+                        ),
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                  builder: (context) => AlltasksPage()));
+                        },
                       )
                     ],
                   ),
