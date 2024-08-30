@@ -53,7 +53,7 @@ class _NewTaskState extends State<NewTask> {
                   borderRadius: BorderRadius.circular(10)),
               child: Center(
                 child: Icon(
-                  CupertinoIcons.search,
+                  CupertinoIcons.bell,
                   color: theme.brightness == Brightness.light
                       ? Colors.black
                       : Colors.white,
