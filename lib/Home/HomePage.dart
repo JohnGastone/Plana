@@ -400,24 +400,6 @@ class _HomePageState extends State<HomePage> {
                         padding: const EdgeInsets.only(top: 8.0),
                         child: Row(
                           children: [
-                            Container(
-                              height: 40,
-                              width: 40,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Color.fromARGB(255, 179, 210, 210),
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/marketing.png",
-                                  height: 25,
-                                  width: 25,
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -463,24 +445,6 @@ class _HomePageState extends State<HomePage> {
                         padding: const EdgeInsets.only(top: 8.0),
                         child: Row(
                           children: [
-                            Container(
-                              height: 40,
-                              width: 40,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Color.fromARGB(255, 179, 210, 210),
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/marketing.png",
-                                  height: 25,
-                                  width: 25,
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -526,24 +490,6 @@ class _HomePageState extends State<HomePage> {
                         padding: const EdgeInsets.only(top: 8.0),
                         child: Row(
                           children: [
-                            Container(
-                              height: 60,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Color.fromARGB(255, 179, 210, 210),
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/marketing.png",
-                                  height: 40,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
