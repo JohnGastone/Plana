@@ -389,7 +389,7 @@ class _HomePageState extends State<HomePage> {
                     height: 20,
                   ),
                   Container(
-                    height: 80,
+                    height: 120,
                     width: 320,
                     decoration: BoxDecoration(
                         color: const Color.fromARGB(31, 137, 126, 126),
@@ -452,7 +452,7 @@ class _HomePageState extends State<HomePage> {
                     height: 15,
                   ),
                   Container(
-                    height: 80,
+                    height: 120,
                     width: 320,
                     decoration: BoxDecoration(
                         color: const Color.fromARGB(31, 137, 126, 126),
@@ -515,7 +515,7 @@ class _HomePageState extends State<HomePage> {
                     height: 15,
                   ),
                   Container(
-                    height: 80,
+                    height: 120,
                     width: 320,
                     decoration: BoxDecoration(
                         color: const Color.fromARGB(31, 137, 126, 126),
