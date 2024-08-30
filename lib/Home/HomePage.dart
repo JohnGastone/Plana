@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:plana/Settings/Settings.dart';
 import 'package:plana/Tasks/AllTasks.dart';
 import 'package:plana/Tasks/Calendar.dart';
+import 'package:plana/Tasks/NewTask.dart';
 
 import '../../Tasks/TaskPage.dart';
 
@@ -568,7 +569,12 @@ class _HomePageState extends State<HomePage> {
                           child: FloatingActionButton(
                             backgroundColor: Colors.transparent,
                             elevation: 0,
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  CupertinoPageRoute(
+                                      builder: (context) => NewTask()));
+                            },
                             child: Icon(
                               CupertinoIcons.add,
                               color: Colors.white,
