@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:plana/Settings/Settings.dart';
+import 'package:plana/Tasks/AllTasks.dart';
 import 'package:plana/Tasks/Calendar.dart';
 
 import '../../Tasks/TaskPage.dart';
@@ -199,12 +200,20 @@ class _HomePageState extends State<HomePage> {
                         style: GoogleFonts.poppins(
                             fontSize: 20, fontWeight: FontWeight.bold),
                       ),
-                      Text(
-                        "See All",
-                        style: GoogleFonts.poppins(
-                            color: Colors.grey,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w400),
+                      InkWell(
+                        child: Text(
+                          "See All",
+                          style: GoogleFonts.poppins(
+                              color: Colors.grey,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w400),
+                        ),
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                  builder: (context) => AlltasksPage()));
+                        },
                       )
                     ],
                   ),
