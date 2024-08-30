@@ -48,26 +48,32 @@ class Onboardingcarousel extends StatelessWidget {
       headerBackgroundColor: Colors.white,
       pageBackgroundColor: Colors.white,
       background: [
-        Image.asset(
-          'assets/orga.png',
-          height: 400,
-          width: 400,
-          fit: BoxFit.cover,
-        ),
         Padding(
-          padding: const EdgeInsets.only(left: 38.0),
+          padding: const EdgeInsets.only(left: 58.0, top: 60),
           child: Image.asset(
-            'assets/simplify.png',
-            height: 400,
-            width: 300,
+            'assets/orga.png',
+            height: 200,
+            width: 200,
             fit: BoxFit.cover,
           ),
         ),
-        Image.asset(
-          'assets/achieve.png',
-          height: 400,
-          width: 400,
-          fit: BoxFit.cover,
+        Padding(
+          padding: const EdgeInsets.only(left: 58.0, top: 60),
+          child: Image.asset(
+            'assets/simplify.png',
+            height: 200,
+            width: 200,
+            fit: BoxFit.cover,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 58.0, top: 60),
+          child: Image.asset(
+            'assets/achieve.png',
+            height: 200,
+            width: 200,
+            fit: BoxFit.cover,
+          ),
         ),
       ],
       speed: 1.8,
