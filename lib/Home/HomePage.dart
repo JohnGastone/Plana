@@ -527,8 +527,8 @@ class _HomePageState extends State<HomePage> {
                         child: Row(
                           children: [
                             Container(
-                              height: 40,
-                              width: 40,
+                              height: 60,
+                              width: 50,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 color: Color.fromARGB(255, 179, 210, 210),
@@ -536,8 +536,8 @@ class _HomePageState extends State<HomePage> {
                               child: Center(
                                 child: Image.asset(
                                   "assets/marketing.png",
-                                  height: 25,
-                                  width: 25,
+                                  height: 40,
+                                  width: 40,
                                 ),
                               ),
                             ),
