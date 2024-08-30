@@ -386,139 +386,84 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                   SizedBox(
-                    height: 20,
-                  ),
-                  Container(
-                    height: 120,
-                    width: 320,
-                    decoration: BoxDecoration(
-                        color: const Color.fromARGB(31, 137, 126, 126),
-                        borderRadius: BorderRadius.circular(22)),
-                    child: Padding(
-                      padding: EdgeInsets.all(10),
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 8.0),
-                        child: Row(
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Social Media Marketing",
-                                  style: GoogleFonts.poppins(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                                Text(
-                                  "23 Oct 2024",
-                                  style: GoogleFonts.poppins(
-                                      fontSize: 15, color: Colors.grey),
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              width: 30,
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 85.0),
-                              child: IconButton(
-                                  onPressed: () {},
-                                  icon: Icon(Icons.more_vert)),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
                     height: 15,
                   ),
-                  Container(
-                    height: 120,
-                    width: 320,
-                    decoration: BoxDecoration(
-                        color: const Color.fromARGB(31, 137, 126, 126),
-                        borderRadius: BorderRadius.circular(22)),
-                    child: Padding(
-                      padding: EdgeInsets.all(10),
+                  InkWell(
+                    child: Container(
+                      height: 150,
+                      width: 340,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(22),
+                        color: Color.fromARGB(255, 151, 197, 198),
+                      ),
                       child: Padding(
-                        padding: const EdgeInsets.only(top: 8.0),
-                        child: Row(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
-                                  "Social Media Marketing",
-                                  style: GoogleFonts.poppins(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w600),
+                                CircleAvatar(
+                                  backgroundColor: Colors.white,
+                                  radius: 20,
+                                  child: Center(
+                                    child: Image.asset(
+                                      "assets/ui.png",
+                                      height: 20,
+                                      width: 20,
+                                      color: Color.fromARGB(255, 95, 209, 211),
+                                    ),
+                                  ),
                                 ),
-                                Text(
-                                  "23 Oct 2024",
-                                  style: GoogleFonts.poppins(
-                                      fontSize: 15, color: Colors.grey),
-                                )
+                                Icon(Icons.more_vert)
                               ],
                             ),
-                            SizedBox(
-                              width: 30,
+                            Text(
+                              "User experience design",
+                              style: GoogleFonts.poppins(
+                                  color: Colors.white, fontSize: 16),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 85.0),
-                              child: IconButton(
-                                  onPressed: () {},
-                                  icon: Icon(Icons.more_vert)),
+                            SizedBox(
+                              height: 9,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20),
+                                child: LinearProgressIndicator(
+                                  value: 0.4, // Represents 40% progress
+                                  backgroundColor: const Color.fromARGB(
+                                      255,
+                                      216,
+                                      213,
+                                      213), // Optional background color
+                                  valueColor: AlwaysStoppedAnimation<Color>(
+                                      Colors.white), // Progress bar color
+                                ),
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "Progress",
+                                  style: GoogleFonts.poppins(
+                                      color: Colors.white, fontSize: 14),
+                                ),
+                                Text(
+                                  "40%",
+                                  style: GoogleFonts.poppins(
+                                      color: Colors.white, fontSize: 14),
+                                )
+                              ],
                             )
                           ],
                         ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  Container(
-                    height: 120,
-                    width: 320,
-                    decoration: BoxDecoration(
-                        color: const Color.fromARGB(31, 137, 126, 126),
-                        borderRadius: BorderRadius.circular(22)),
-                    child: Padding(
-                      padding: EdgeInsets.all(10),
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 8.0),
-                        child: Row(
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Social Media Marketing",
-                                  style: GoogleFonts.poppins(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                                Text(
-                                  "23 Oct 2024",
-                                  style: GoogleFonts.poppins(
-                                      fontSize: 15, color: Colors.grey),
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              width: 30,
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 85.0),
-                              child: IconButton(
-                                  onPressed: () {},
-                                  icon: Icon(Icons.more_vert)),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
+                    onTap: () {
+                      Navigator.push(context,
+                          CupertinoPageRoute(builder: (context) => TaskPage()));
+                    },
                   ),
                   SizedBox(
                     height: 50,
