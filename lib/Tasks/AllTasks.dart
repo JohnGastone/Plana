@@ -43,7 +43,7 @@ class _AlltasksPageState extends State<AlltasksPage> {
               width: 50,
             ),
             Text(
-              "Task Details",
+              "All Tasks",
               style: GoogleFonts.poppins(
                   fontSize: 22, fontWeight: FontWeight.bold),
             )
