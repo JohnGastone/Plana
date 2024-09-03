@@ -15,8 +15,5 @@ class TaskModelData {
     TaskModel(name: 'Task 6', type: 'Type 6'),
     TaskModel(name: 'Task 7', type: 'Type 7'),
     TaskModel(name: 'Task 8', type: 'Type 8'),
-    TaskModel(name: 'Task 9', type: 'Type 9'),
-    TaskModel(name: 'Task 10', type: 'Type 10'),
-    TaskModel(name: 'Task 11', type: 'Type 11'),
   ];
 }
