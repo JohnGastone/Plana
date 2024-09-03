@@ -86,7 +86,7 @@ class _SettingsPageState extends State<SettingsPage> {
         body: Center(
           child: SingleChildScrollView(
             child: Column(
-              children: [],
+              children: const [],
             ),
           ),
         ),
