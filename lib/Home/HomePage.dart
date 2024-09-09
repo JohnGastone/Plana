@@ -23,12 +23,11 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    // Start a timer to simulate progress (replace with your actual logic)
     Timer.periodic(Duration(seconds: 1), (timer) {
       setState(() {
-        _progress += 0.05; // Increment progress by 5% every second
+        _progress += 0.05;
         if (_progress >= 0.95) {
-          timer.cancel(); // Stop the timer when progress reaches 100%
+          timer.cancel();
         }
       });
     });
@@ -260,14 +259,11 @@ class _HomePageState extends State<HomePage> {
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(20),
                                     child: LinearProgressIndicator(
-                                      value: 0.4, // Represents 40% progress
+                                      value: 0.4,
                                       backgroundColor: const Color.fromARGB(
-                                          255,
-                                          216,
-                                          213,
-                                          213), // Optional background color
+                                          255, 216, 213, 213),
                                       valueColor: AlwaysStoppedAnimation<Color>(
-                                          Colors.white), // Progress bar color
+                                          Colors.white),
                                     ),
                                   ),
                                 ),
@@ -333,14 +329,11 @@ class _HomePageState extends State<HomePage> {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(20),
                                   child: LinearProgressIndicator(
-                                    value: 0.6, // Represents 40% progress
+                                    value: 0.6,
                                     backgroundColor: const Color.fromARGB(
-                                        255,
-                                        216,
-                                        213,
-                                        213), // Optional background color
+                                        255, 216, 213, 213),
                                     valueColor: AlwaysStoppedAnimation<Color>(
-                                        Colors.white), // Progress bar color
+                                        Colors.white),
                                   ),
                                 ),
                               ),
