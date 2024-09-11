@@ -105,10 +105,9 @@ class _TaskPageState extends State<TaskPage> {
                 SizedBox(height: 15),
                 Row(
                   children: [
-                    // Here pie chart from fl_charts
                     SizedBox(
-                      height: 200, // Adjust height as necessary
-                      width: 200, // Adjust width as necessary
+                      height: 200, 
+                      width: 200, 
                       child: PieChart(
                         PieChartData(
                           sections: [
