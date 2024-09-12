@@ -106,8 +106,8 @@ class _TaskPageState extends State<TaskPage> {
                 Row(
                   children: [
                     SizedBox(
-                      height: 200, 
-                      width: 200, 
+                      height: 200,
+                      width: 200,
                       child: PieChart(
                         PieChartData(
                           sections: [

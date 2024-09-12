@@ -16,7 +16,7 @@ class _MyCalendarState extends State<MyCalendar> {
   CalendarFormat _calendarFormat = CalendarFormat.week;
   DateTime _focusedDay = DateTime.now();
   DateTime? _selectedDay;
-  String _selectedTaskType = 'All'; // Add this line
+  String _selectedTaskType = 'All'; 
 
   @override
   Widget build(BuildContext context) {
