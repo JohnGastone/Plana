@@ -12,10 +12,10 @@ class MyCalendar extends StatefulWidget {
 }
 
 class _MyCalendarState extends State<MyCalendar> {
-  CalendarFormat _calendarFormat = CalendarFormat.week;
+  CalendarFormat _calendarFormat = CalendarFormat.month;
   DateTime _focusedDay = DateTime.now();
   DateTime? _selectedDay;
-  String _selectedTaskType = 'All'; 
+  String _selectedTaskType = 'All';
 
   @override
   Widget build(BuildContext context) {
